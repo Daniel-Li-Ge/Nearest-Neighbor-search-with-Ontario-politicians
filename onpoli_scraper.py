@@ -2,12 +2,13 @@ import tweepy
 import sqlite3
 import time
 import datetime
+import my_Oauth as Oauth
 
 
-consumer_key = ""
-consumer_secret = ""
-access_token = ""
-access_token_secret = ""
+consumer_key = Oauth.consumer_key
+consumer_secret = Oauth.consumer_secret
+access_token = Oauth.access_token
+access_token_secret = Oauth.secret
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
