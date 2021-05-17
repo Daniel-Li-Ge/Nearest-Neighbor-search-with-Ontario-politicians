@@ -5,7 +5,7 @@ There's also a forked file from twint API which I used to build a rotating proxy
 
 #Raw SQLite vs Spark SQL (Why i used spark)
 
-I did the Jaccard similarity calculations by writing SELECT statements in SQLite first. On an indexed table with row length in the tens of millions, a single calculation (~83,000 followers vs ~141,000) costed ~12.98 seconds. Completing an entire nearest neighbor graph is an (O(n)^2-O(n))/2 operation, With n being a few hundred the runtime would easily exceed 24 hours. 
+I did the Jaccard similarity calculations by writing SELECT statements in SQLite first. On an indexed table with row length in the tens of millions, a single calculation (~83,000 followers vs ~141,000) costed ~12.98 seconds. Completing an entire nearest neighbor graph is an ```(O(n)^2-O(n))/2``` operation, With `n` being a few hundred the runtime would easily exceed 24 hours. For more reading on the Jaccard algorithm it's runtime: [Neo4j](https://neo4j.com/docs/graph-algorithms/current/labs-algorithms/jaccard/) has a great doc on it. 
 
 The heart of the SQL statement used to calculate intersection of followers between two politicians:
 
