@@ -3,7 +3,7 @@ I scraped some Ontario politicians and their follower information. I did a neare
 
 There's also a forked file from twint API which I used to build a rotating proxy. The purpose was to bypass twitter's temprorary IP bans for sending too many GET requests. It's currently working but unfinished as I'm working on getting it auto rotate free and working proxies. 
 
-#Raw SQLite vs Spark SQL (Why i used spark)
+# Raw SQLite vs Spark SQL (Why i used spark)
 
 I did the Jaccard similarity calculations by writing SELECT statements in SQLite first. On an indexed table with row length in the tens of millions, a single calculation (~83,000 followers vs ~141,000) costed ~12.98 seconds. Completing an entire nearest neighbor graph is an ```(O(n)^2-O(n))/2``` operation, With `n` being a few hundred the runtime would easily exceed 24 hours. For more reading on the Jaccard algorithm it's runtime: [Neo4j](https://neo4j.com/docs/graph-algorithms/current/labs-algorithms/jaccard/) has a great doc on it. 
 
