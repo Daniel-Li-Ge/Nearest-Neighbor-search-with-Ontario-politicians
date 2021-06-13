@@ -4,7 +4,7 @@ dbname = "onpoli_graph.db"
 conn = sqlite3.connect(dbname)
 
 with conn:
-    cursor = cursor = conn.cursor()
+    cursor = conn.cursor()
     mega = """
         CREATE TABLE IF NOT EXISTS
             mega_ids(
