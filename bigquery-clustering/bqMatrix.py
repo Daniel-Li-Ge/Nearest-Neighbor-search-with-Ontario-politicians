@@ -97,7 +97,7 @@ class CustomBigQueryKNN:
         Params
         -------
         node: str | int
-            the target node to find k-nearest neighbors
+            target node to find k-nearest neighbors
         k: optional[int]
             number of nearest neighbors
         Returns
