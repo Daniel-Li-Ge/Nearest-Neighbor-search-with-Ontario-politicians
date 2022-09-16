@@ -108,7 +108,15 @@ SELECT
  ON
   e1.id < e2.id
 ```
+Because of BigQuery's parallelization behind the scenes, the entire pairwise computation took ~56 seconds!
 
+### CLUSTERING:
+
+I built a class to handle importing the edge list from BQ and converting it into a [SKLearn graph](https://scikit-network.readthedocs.io/en/latest/). I then explored a few different clustering methods and embeddings. 
+
+For me details checkout my: [notebook](https://github.com/Daniel-Li-Ge/Nearest-Neighbor-search-with-Ontario-politicians/blob/bq-clustering/bigquery-clustering/ontario_poli.ipynb) (download it to view the images in full)
+
+![image](https://user-images.githubusercontent.com/67663508/190526746-647282e2-f5f9-403d-b770-6378faf93b02.png)
 
 ## Note:
 The Jaccard notebook has errors as outputs however the code is 100% working fine. The errors were caused by leaving Pyspark dataframes in memory for too long. 
