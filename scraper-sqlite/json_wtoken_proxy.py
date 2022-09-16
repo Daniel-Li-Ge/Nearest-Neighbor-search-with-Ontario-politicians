@@ -1,3 +1,5 @@
+# Forked from TWINT on old PC, most of this code is not mine
+
 import re
 import time
 
